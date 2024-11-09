@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 Filipa!!!</title>
+    <style>
+        /* Styl ogólny dla centrowania treści */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #8FBC8F;
+        }
+
+        /* Styl kontenera */
+        .container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+        }
+
+        /* Styl nagłówka */
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Styl komunikatu */
+        #message {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Styl odliczania */
+        #countdown {
+            font-size: 24px;
+            font-weight: bold;
+            color: #228B22;
+            margin-bottom: 20px;
+        }
+
+        /* Styl życzeń z przewijaniem */
+        #birthday-message {
+            display: none;
+            font-size: 18px;
+            color: #333;
+            background-color: #98FB98;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-height: 300px; 
+            overflow-y: auto;
+            text-align: left;
+        }
+    </style>
+    <script>
+        function startCountdown() {
+            // Ustawienie dokładnej daty i godziny dostępu
+            const accessTime = new Date("2024-11-09T23:59:59").getTime();
+
+            // Aktualizacja co sekundę
+            const countdownInterval = setInterval(() => {
+                const now = new Date().getTime();
+                const timeLeft = accessTime - now;
+
+                // Obliczenia do wyświetlania dni, godzin, minut i sekund
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                // Wyświetlanie odliczania lub komunikat przed dostępem
+                if (timeLeft > 0) {
+                    document.getElementById("countdown").innerText = 
+                        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                    document.getElementById("message").innerText = "Plik będzie dostępny w dniu twoich urodzin, Fifiś❤️";
+                } else {
+                    clearInterval(countdownInterval); 
+                    document.getElementById("countdown").innerText = ""; 
+                    document.getElementById("message").innerText = "🎉 Wszystkiego Najlepszego Fifiś 🎉";
+                    document.getElementById("birthday-message").style.display = "block"; 
+                }
+            }, 1000);
+        }
+    </script>
+</head>
+<body onload="startCountdown()">
+    <div class="container">
+        <h1>🦕🦖</h1>
+        <p id="message"></p>
+        <div id="countdown">Ładowanie odliczania...</div> 
+        <div id="birthday-message">
+            Mój kochany Fifisiu,<br> <br>   
+            Dzisiaj są Twoje urodziny – całkiem poważne, bo osiemnaste! (czytaj: jesteś stary, nie to co ja).<br>  <br>  
+             W tym totalnie wyjątkowym dniu chciałabym Ci życzyć przede wszystkim zdrowia: żebyś naprawił ten swój złamany od wieków palec, żeby Twoja pachwina (jedna!) przestała Ci doskwierać i żeby już nigdy nie powtórzyła się ta straszna akcja z Twoim brzuchem. <br>  <br>  
+            
+            Życzę Ci, abyś w tym roku odnalazł siebie w pełni. Pamiętaj, że nie każdy będzie w stanie zrozumieć Twoją drogę czy docenić Twoje starania. Dlatego chcę, abyś nauczył się kochać siebie w 100%, bo ja kocham Cię w 200%. Niech ten nadchodzący rok pomoże Ci wyrażać swoje uczucia i myśli tak, aby wybrzmiały dla każdego dokładnie tak, jak chcesz.  <br> <br>   
+            
+            Pamiętaj, że nie ważne, czy inni Cię rozumieją – rodzice, koledzy, nauczyciele – ja zawsze będę słuchać i rozmawiać, aż nie zrozumiem tego, co czujesz, i nie znajdę sposobu, żeby Ci pomóc. Wiem, że robisz wszystko, by było mi jak najlepiej, ale pamiętaj o sobie, bo dla mnie to Ty jesteś najważniejszy. Bądź dla siebie bardziej wyrozumiały, wyrażaj swoje uczucia i myśli, bo żadne z nich nie są błahe ani głupie.  <br>  <br>  
+            
+            Spełniaj swoje marzenia i nie słuchaj innych – to Ty wiesz najlepiej, co jest dla Ciebie dobre, a co nie. Niech uśmiech zawsze towarzyszy Ci na twarzy, bo jest najpiękniejszy na świecie i potrafi zdziałać cuda, gdy jest mi źle. Ty zasługujesz na każdy powód do radości.  <br>  <br>  
+            
+            Wiem, że dołuje Cię temat Twojej drużyny. Nie wiadomo, co będzie po zakończeniu tego sezonu, ale pamiętaj, że wartościowe relacje zostaną z Tobą na długo. Nie mogę Ci obiecać, że będziesz miał kontakt z każdym, bo na pewno tak nie będzie. To Twoja rodzina, więc to będzie trudne, ale właśnie to pokazuje, jak wartościowi byli w Twoim życiu.  <br>  <br>  
+            
+            To samo dotyczy Nikodema i jego wyjazdu. Filip, on jest Twoim bratem. Takich relacji się nie traci. Jeśli tylko będziesz się starał tak samo, jak starasz się teraz, to nic złego się nie wydarzy. Nie możesz nastawiać się na codzienny, idealny kontakt, bo to nie wypali. Ale rzeczą, którą zazdroszczę Ci najbardziej na świecie, jest właśnie ta relacja, i wiem, że z miłością, jaką do niego masz, to nie przepadnie. Jesteście bratnimi duszami, i ja wierzę, że jeśli los Was połączył, to już Was nie rozłączy – jeśli tylko będziecie tego chcieli.  <br>  <br>  
+            
+            To niekoniecznie będzie dla Ciebie łatwy rok, ale pamiętaj, że ZAWSZE jestem dla Ciebie. <br>  <br>  
+            Witaj w świecie dorosłych, Misiek!🎂🥳  <br>  <br>  
+            
+            Kocham Cię najbardziej na świecie,  <br>  <br>  
+            Twój Lulek ❤️❤️❤️ 
+        </div>
+    </div>
+</body>
+</html>
